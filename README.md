@@ -52,9 +52,9 @@ Data blok kendaraan berhasil diperbarui dari E1 menjadi C3 pada ID 0005.
 
 ### Proses Perbarui Jam Keluar pada ID 0001
 
-<img width="1005" height="1072" alt="image" src="https://github.com/user-attachments/assets/bd24c869-db67-401b-9d42-c053e0545f2b" />
+<img width="985" height="1051" alt="image" src="https://github.com/user-attachments/assets/2e398e81-f0d2-4632-86f6-ff620f5bae8b" />
 
-Pada menu Perbarui (Jam Keluar & Hitung Biaya) untuk kendaraan Mobil, program menghitung lama parkir dari selisih jam masuk dan jam keluar menggunakan Duration.between(masuk, keluar), kemudian membulatkannya ke atas ke satuan jam minimal 1 jam dengan rumus (menit + 59) / 60 dan Math.max(1, ...) (selisih 08:10 - 12:35 menjadi 5 jam). Setelah menerapkan inheritance dan overriding, perhitungan tarif tidak lagi dilakukan di ParkingService, melainkan cukup memanggil posisi.hitungBiaya(jamBulatKeAtas). Method ini dioverride di ParkirMobil sehingga biaya parkir langsung dihitung dengan perkalian jamBulatKeAtas × 5000 (5 jam × 5000 = Rp25.000). Selain mengembalikan nilai biaya, method override di ParkirMobil juga menampilkan informasi ke konsol, seperti pesan “>> Menghitung biaya untuk kendaraan Mobil…”, durasi parkir dalam jam, dan total biaya parkir. Hasil akhir berupa jam keluar, durasi, dan biaya kemudian disimpan melalui setter setKeluarHitung(...).
+Pada menu Perbarui (Jam Keluar & Hitung Biaya) untuk kendaraan Mobil, program menghitung lama parkir dari selisih jam masuk dan jam keluar menggunakan Duration.between(masuk, keluar), kemudian membulatkannya ke atas ke satuan jam minimal 1 jam dengan rumus (menit + 59) / 60 dan Math.max(1, ...) (selisih 08:10 - 12:35 menjadi 5 jam). Setelah menerapkan inheritance dan overriding, perhitungan tarif tidak lagi dilakukan di ParkingService, melainkan cukup memanggil posisi.hitungBiaya(jamBulatKeAtas). Method ini dioverride di ParkirMobil sehingga biaya parkir langsung dihitung dengan perkalian jamBulatKeAtas × 5000 (5 jam × 5000 = Rp25.000). Selain mengembalikan nilai biaya, method override di ParkirMobil juga menampilkan informasi ke konsol, seperti pesan “>> Menghitung biaya untuk kendaraan Mobil KT4959IO . . .”, durasi parkir dalam jam, dan total biaya parkir. Hasil akhir berupa jam keluar, durasi, dan biaya kemudian disimpan melalui setter setKeluarHitung(...).
 
 ### Sesudah Perbarui Jam Keluar pada ID Tiket 0001
 
@@ -70,7 +70,7 @@ Data kendaraan Mobil dengan ID 0001 berhasil diperbarui, jam keluar tercatat 12:
 
 ### Proses Perbarui Jam Keluar pada ID 0004
 
-<img width="972" height="1058" alt="image" src="https://github.com/user-attachments/assets/3b605ef3-7d9a-4886-a20b-8c81f7b915eb" />
+<img width="1004" height="1059" alt="image" src="https://github.com/user-attachments/assets/bcc71e61-0b8a-48dc-8cc3-efa4e6aed21c" />
 
 Pada menu Perbarui (Jam Keluar & Hitung Biaya) untuk Motor, program menghitung selisih 09:20–16:00 menjadi 7 jam, lalu memanggil hitungBiaya() yang dioverride di ParkirMotor untuk menghitung biaya 7 × 3000 = Rp21.000. Jam keluar, durasi, dan biaya disimpan melalui setKeluarHitung().
 
