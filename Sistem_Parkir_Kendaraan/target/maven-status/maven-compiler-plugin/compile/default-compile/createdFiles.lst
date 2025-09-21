@@ -1,0 +1,6 @@
+model\Parkir.class
+model\ParkirMotor.class
+service\ParkingService.class
+view\ParkingView.class
+model\ParkirMobil.class
+main\Main.class
